@@ -1,9 +1,9 @@
 ---
 gateway:
   admin:
-    enabled: false
+    enabled: true
     http:
-      enabled: false
+      enabled: true
 
   env:
     # log_level: debug
