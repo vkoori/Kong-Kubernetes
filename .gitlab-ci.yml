@@ -1,0 +1,13 @@
+stages:
+  - deploy
+
+deploy_dev:
+  stage: deploy
+  script:
+    - chmod +x start.sh kong/helm.sh kube/CRDs.sh kube/namespace.sh kube/vault.sh secret/cert.sh secret/docker.sh
+    - mkdir -p $HOME/.kube
+    - echo ${kube_config_demo} | base64 -d > $HOME/.kube/config
+    - ./start.sh
+  only:
+    - master
+  when: manual
