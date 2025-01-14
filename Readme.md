@@ -6,7 +6,14 @@ Simple automation for deploying Kong on Kubernetes
 helm template kong kong/ingress -n kong --values values.yaml > rendered.yaml
 ```
 
-**See**
+**Deployment**
+
+```shell
+    - chmod +x start.sh kong/helm.sh kube/CRDs.sh kube/namespace.sh kube/vault.sh secret/cert.sh secret/docker.sh
+    - ./start.sh
+```
+
+**See Also**
 
 1. https://docs.konghq.com/kubernetes-ingress-controller/latest/get-started/
 2. https://docs.konghq.com/kubernetes-ingress-controller/latest/guides/services/http/
