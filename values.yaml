@@ -25,13 +25,13 @@ gateway:
     # externalTrafficPolicy: Local
     http:
       enabled: true
-      servicePort: 0
+      servicePort: 80
       containerPort: 8000
       parameters: []
     # loadBalancerIP: 192.168.54.155
     tls:
       enabled: true
-      servicePort: 0
+      servicePort: 433
       containerPort: 8443
       parameters:
       - http2
